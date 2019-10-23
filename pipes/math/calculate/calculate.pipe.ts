@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+
 import { CalculateActions } from './calculate-actions.enum';
 
 @Pipe({
