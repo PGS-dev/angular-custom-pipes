@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "test",
+    "experimentalDecorators": true,
+    "target": "es5",
+    "lib": [
+      "dom",
+      "es5",
+      "es2015"
+    ],
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
