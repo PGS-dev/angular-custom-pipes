@@ -18,16 +18,16 @@
   
 3. Now you are able to use imported pipes, for example:
 
-In template:
+    In template:
 
         <p>{{ 10 | calculate: 2: CalculateActions.ADD }}</p> <!-- Output: 12 -->
         
-In component:
+    In component:
 
-        import { CalculateActions, CalculatePipe } from 'ng-x-pipes';
+        import { CalculateActions, UniquePipe } from 'ng-x-pipes';
         
         export class AppComponent {
-          constructor(private calculatePipe: CalculatePipe) {
+          constructor(private calculatePipe: UniquePipe) {
             this.calculatePipe.transform(10, 2, CalculateActions.ADD); // Returns: 12
           }
           // ..
