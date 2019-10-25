@@ -8,11 +8,11 @@ describe('UniqueByPipe', () => {
     expect(pipe).toBeTruthy();
   });
 
-  it('UniqueBy pipe should return array with unique by key values', () => {
+  it('UniqueBy pipe should return array with unique values', () => {
     expect(pipe.transform(array, 'x')).toEqual([{ 'x': 1 }, { 'x': 2 }]);
   });
 
-  it('Unique pipe should return array with 3 items', () => {
+  it('UniqueBy pipe should return array with 3 items', () => {
     pipe.transform(array, 'x');
 
     expect(array.length).toEqual(3);
