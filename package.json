@@ -2,7 +2,7 @@
   "author": "Tomasz Laskowski",
   "description": "Angular custom pipes",
   "name": "ng-x-pipes",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "test": "npx tsc --project tsconfig.spec.json && npx jasmine"
   },
