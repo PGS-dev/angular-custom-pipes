@@ -24,10 +24,10 @@
         
     In component:
 
-        import { CalculateActions, UniquePipe } from 'ng-x-pipes';
+        import { CalculateActions, CalculatePipe } from 'ng-x-pipes';
         
         export class AppComponent {
-          constructor(private calculatePipe: UniquePipe) {
+          constructor(private calculatePipe: CalculatePipe) {
             this.calculatePipe.transform(10, 2, CalculateActions.ADD); // Returns: 12
           }
           // ..
