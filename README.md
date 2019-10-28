@@ -18,11 +18,11 @@
   
 3. Now you are able to use imported pipes, for example:
 
-In template:
+    In template:
 
         <p>{{ 10 | calculate: 2: CalculateActions.ADD }}</p> <!-- Output: 12 -->
         
-In component:
+    In component:
 
         import { CalculateActions, CalculatePipe } from 'ng-x-pipes';
         
