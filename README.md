@@ -4,7 +4,7 @@
 
         $ npm install angular-custom-pipes
     
-2. You can import all Pipes by NGxPipesModule or specific pipes importing one module such as MathPipesModule, for example:
+2. You can import all Pipes by AngularCustomPipesModule or specific pipes importing one module such as MathPipesModule, for example:
 
         import { AngularCustomPipesModule } from 'angular-custom-pipes';
         
