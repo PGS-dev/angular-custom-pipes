@@ -9,4 +9,4 @@ import { MathPipesModule } from './math/math-pipes.module';
     MathPipesModule,
   ],
 })
-export class NGxPipesModule {}
+export class AngularCustomPipesModule {}

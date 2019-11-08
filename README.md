@@ -2,17 +2,17 @@
 
 1. Use npm to install the package
 
-        $ npm install ng-x-pipes
+        $ npm install angular-custom-pipes
     
 2. You can import all Pipes by NGxPipesModule or specific pipes importing one module such as MathPipesModule, for example:
 
-        import { NGxPipesModule } from 'ng-x-pipes';
+        import { AngularCustomPipesModule } from 'angular-custom-pipes';
         
         @NgModule({
          // ...
          imports: [
            // ...
-           NGxPipesModule
+           AngularCustomPipesModule
          ]
         })
   
@@ -24,7 +24,7 @@
         
     In component:
 
-        import { CalculateActions, CalculatePipe } from 'ng-x-pipes';
+        import { CalculateActions, CalculatePipe } from 'angular-custom-pipes';
         
         export class AppComponent {
           constructor(private calculatePipe: CalculatePipe) {
