@@ -1,4 +1,4 @@
-import { RemoveFalsyPipe } from './removeFalsy.pipe';
+import { RemoveFalsyPipe } from './remove-falsy.pipe';
 
 describe('RemoveFalsyPipe', () => {
   const pipe = new RemoveFalsyPipe();

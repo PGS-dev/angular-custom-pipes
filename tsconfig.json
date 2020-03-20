@@ -1,17 +1,31 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "module": "commonjs",
-    "experimentalDecorators": true,
-    "target": "es5",
-    "lib": [
-      "es5",
-      "es2015"
-    ],
+    "baseUrl": "./",
+    "downlevelIteration": true,
+    "outDir": "./dist/out-tsc",
     "sourceMap": true,
-    "outDir": "dist"
-  },
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
+    "declaration": false,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "angular-custom-pipes": [
+        "dist/angular-custom-pipes"
+      ],
+      "angular-custom-pipes/*": [
+        "dist/angular-custom-pipes/*"
+      ]
+    }
+  }
 }
