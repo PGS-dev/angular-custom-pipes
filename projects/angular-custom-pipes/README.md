@@ -52,7 +52,7 @@ Math
                                  
 #### Array  
 
-######drop
+###### drop
 
 Returns slice of _array_ <br />
 
@@ -64,7 +64,7 @@ Returns slice of _array_ <br />
 <p>{{ [1, 2, 3] | drop }}</p> // Output: [1, 2, 3]
 ```
 
-######head
+###### head
 
 Returns _first value_ of array <br />
 
@@ -73,7 +73,7 @@ Returns _first value_ of array <br />
 <p>{{ [1, 2, 3] | head }}</p> // Output: [1]
 ```
 
-######indexOf
+###### indexOf
 
 Returns _index_ of array or -1 <br />
 
@@ -82,7 +82,7 @@ Returns _index_ of array or -1 <br />
 <p>{{ [1, 2, 3] | indexOf: 2 }}</p> // Output: 1
 ```
 
-######initial
+###### initial
 
 Returns _array_ without last value <br />
 
@@ -91,7 +91,7 @@ Returns _array_ without last value <br />
 <p>{{ [1, 2, 3] | initial: 2 }}</p> // Output: [1, 2]
 ```
 
-######isEmpty
+###### isEmpty
 
 Returns _true_ if array is empty, else _false_ <br />
 
@@ -103,7 +103,7 @@ Returns _true_ if array is empty, else _false_ <br />
 <p>{{ [] | isEmpty }}</p> // Output: true
 ```
 
-######join
+###### join
 
 Returns a _string_ separated by separator <br />
 
@@ -115,7 +115,7 @@ Returns a _string_ separated by separator <br />
 <p>{{ [1, 2, 3] | join: '*' }}</p> // Output: '1*2*3'
 ```
 
-######last
+###### last
 
 Returns _last value_ of array <br />
 
@@ -124,7 +124,7 @@ Returns _last value_ of array <br />
 <p>{{ [1, 2, 3] | last }}</p> // Output: 3
 ```
 
-######removeFalsy
+###### removeFalsy
 
 Returns _array_ without falsy values <br />
 
@@ -133,7 +133,7 @@ Returns _array_ without falsy values <br />
 <p>{{ [1, null, 2, [], NaN] | removeFalsy }}</p> // Output: [1, 2]
 ```
 
-######sum
+###### sum
 
 Returns _sum_ of values in array <br />
 
@@ -142,7 +142,7 @@ Returns _sum_ of values in array <br />
 <p>{{ [1, 2, 3] | sum }}</p> // Output: 6
 ```
 
-######unique
+###### unique
 
 Returns new array without duplicate values <br />
 
@@ -151,7 +151,7 @@ Returns new array without duplicate values <br />
 <p>{{ [1, 2, 3, 2] | unique }}</p> // Output: [1, 2, 3]
 ```
 
-######uniqueBy
+###### uniqueBy
 
 Returns new array without duplicate values <br />
 
@@ -163,7 +163,7 @@ Returns new array without duplicate values <br />
 
 #### Math  
 
-######calculate
+###### calculate
 
 Returns result of calculate <br />
 
