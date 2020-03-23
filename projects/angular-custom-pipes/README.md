@@ -32,3 +32,20 @@
           }
           // ..
         }
+
+# Documentation
+
+* [Array](#Array)
+* [Math](#Math)
+                                 
+## Array  
+
+**drop** <br />
+
+Returns slice of array <br />
+
+**Examples** <br />
+```
+<p>{{ [1, 2, 3] | drop: 2 }}</p> // Output: [3]
+
+<p>{{ [1, 2, 3] | drop }}</p> // Output: [1, 2, 3]

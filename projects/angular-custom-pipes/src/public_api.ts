@@ -1,5 +1,5 @@
 /*
- * Public API Surface of angular-custom-pipes
+ * Public API Surface of pgs-dev
  */
 
 export * from './lib/angular-custom-pipes.module';
