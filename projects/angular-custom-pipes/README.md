@@ -144,7 +144,7 @@ Returns _sum_ of values in array <br />
 
 ###### unique
 
-Returns new array without duplicate values <br />
+Returns new _array_ without duplicate values <br />
 
 **Example** <br />
 ```
@@ -153,7 +153,7 @@ Returns new array without duplicate values <br />
 
 ###### uniqueBy
 
-Returns new array without duplicate values <br />
+Returns new _array_ without duplicate values <br />
 
 **Example** <br />
 ```
