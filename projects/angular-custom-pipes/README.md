@@ -49,6 +49,17 @@ Array
 
 Math
 - [`calculate`](#calculate)
+- [`min`](#min)
+- [`max`](#max)
+
+Object
+- [`assign`](#assign)
+- [`invert`](#invert)
+- [`keys`](#keys)
+- [`omit`](#omit)
+- [`pick`](#pick)
+- [`toArray`](#toArray)
+- [`values`](#values)
                                  
 #### Array  
 
@@ -179,4 +190,108 @@ Returns result of calculate <br />
 ```
 ```
 <p>{{ 10 | calculate: 2: CalculateActions.DIVIDE }}</p> // Output: 5
+```
+
+###### min
+
+Returns minimum value of array <br />
+
+**Example** <br />
+```
+<p>{{ [1, 2, 3] | min }}</p> // Output: 1
+```
+
+###### max
+
+Returns maximum value of array <br />
+
+**Example** <br />
+```
+<p>{{ [1, 2, 3] | max }}</p> // Output: 3
+```
+
+<br />
+
+#### Object  
+
+###### assign
+
+Returns target _object_ <br />
+
+**Example** <br />
+```
+<p>{{ {foo: 1} | assign: {bar: 2} }}</p> // Output: {foo: 1, bar: 2}
+```
+
+###### invert
+
+Returns inverted _object_ <br />
+
+**Example** <br />
+```
+<p>{{ {foo: 1, bar: 2} | invert }}</p> // Output: {1: 'foo', 2: 'bar'}
+```
+
+###### keys
+
+Returns _array_ of object keys <br />
+
+**Example** <br />
+```
+<p>{{ {foo: 1, bar: 2} | keys }}</p> // Output: ['foo', 'bar']
+```
+
+###### omit
+
+Returns _object_ without defined key/keys <br />
+
+**Example** <br />
+```
+<p>{{ {foo: 1, bar: 2} | omit: 'foo' }}</p> // Output: {bar: 2}
+```
+```
+<p>{{ {foo: 1, bar: 2} | omit: 'foo': 'bar' }}</p> // Output: {}
+```
+
+###### pick
+
+Returns _object_ only with defined key/keys <br />
+
+**Example** <br />
+```
+<p>{{ {foo: 1, bar: 2} | pick: 'foo' }}</p> // Output: {foo: 1}
+```
+```
+<p>{{ {foo: 1, bar: 2} | pick: 'foo': 'bar' }}</p> // Output: {foo: 1, bar: 2}
+```
+
+###### toArray
+
+Returns transformed an object to _array_ <br />
+
+**Example** <br />
+```
+<p>{{ {foo: 1, bar: 2} | toArray }}</p> // Output: [1, 2]
+```
+```
+const value = {
+  foo: {
+    type: 1
+  },
+  bar: {
+    type: 2
+  }
+}
+```
+```
+<p>{{ value | toArray }}</p> // Output: [{type: 1}, {type: 2}]
+```
+
+###### values
+
+Returns _array_ with object values <br />
+
+**Example** <br />
+```
+<p>{{ {foo: 1, bar: 2} | keys }}</p> // Output: [1, 2]
 ```
