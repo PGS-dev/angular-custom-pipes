@@ -8,6 +8,13 @@
     "@angular/common": "~9.0.7",
     "@angular/core": "~9.0.7"
   },
+  "author": "Tomasz Laskowski",
+  "repository": {
+    "directory": "",
+    "type": "git",
+    "url": "https://github.com/PGS-dev/angular-custom-pipes/tree/master/projects/angular-custom-pipes"
+  },
+  "homepage": "https://github.com/PGS-dev/angular-custom-pipes",
   "keywords": [
     "angular",
     "pipes",
