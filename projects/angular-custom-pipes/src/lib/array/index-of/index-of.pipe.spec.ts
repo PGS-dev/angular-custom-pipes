@@ -8,19 +8,19 @@ describe('IndexOfPipe', () => {
     expect(pipe).toBeTruthy();
   });
 
-  it('index-of pipe should return value -1', () => {
+  it('indexOf pipe should return value -1', () => {
     expect(pipe.transform(array, 0)).toEqual(-1);
   });
 
-  it('index-of pipe should return 0', () => {
+  it('indexOf pipe should return 0', () => {
     expect(pipe.transform(array, 1)).toEqual(0);
   });
 
-  it('index-of pipe should return -1', () => {
+  it('indexOf pipe should return -1', () => {
     expect(pipe.transform(array, -1)).toEqual(-1);
   });
 
-  it('index-of pipe should return -1', () => {
+  it('indexOf pipe should return -1', () => {
     expect(pipe.transform(array, 5)).toEqual(-1);
   });
 });

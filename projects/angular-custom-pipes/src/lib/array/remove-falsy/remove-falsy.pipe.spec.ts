@@ -8,7 +8,7 @@ describe('RemoveFalsyPipe', () => {
     expect(pipe).toBeTruthy();
   });
 
-  it('RemoveFalsy pipe should return array with truthy values', () => {
+  it('removeFalsy pipe should return array with truthy values', () => {
     expect(pipe.transform(array)).toEqual(['blue', 9, true, 'white']);
   });
 });

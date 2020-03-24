@@ -8,15 +8,15 @@ describe('IsEmptyPipe', () => {
     expect(pipe).toBeTruthy();
   });
 
-  it('is-empty pipe should return false', () => {
+  it('isEmpty pipe should return false', () => {
     expect(pipe.transform(array)).toBeFalsy();
   });
 
-  it('is-empty pipe should return true', () => {
+  it('isEmpty pipe should return true', () => {
     expect(pipe.transform([])).toBeTruthy();
   });
 
-  it('is-empty pipe should return null', () => {
-    expect(pipe.transform(null)).toEqual(null);
+  it('isEmpty pipe should return null', () => {
+    expect(pipe.transform(null)).toEqual(false);
   });
 });

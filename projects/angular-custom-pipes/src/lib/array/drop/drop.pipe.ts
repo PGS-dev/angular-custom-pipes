@@ -1,11 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+import { isArray } from '../../utils/utils';
+
 @Pipe({
   name: 'drop'
 })
 export class DropPipe implements PipeTransform {
   transform(value: any[], arg?: number): any[] {
-    if(Array.isArray(value) && value.length) {
+    if(isArray(value) && value.length) {
       return arg >= 0 ? this.getValue(value, arg) : value;
     }
 
@@ -16,7 +18,7 @@ export class DropPipe implements PipeTransform {
     return !value[arg];
   }
 
-  private getValue(value: any[], arg: number) {
+  private getValue(value: any[], arg: number): any[] {
     return this.hasNoValue(value, arg) ? [] : value.slice(arg);
   }
 }

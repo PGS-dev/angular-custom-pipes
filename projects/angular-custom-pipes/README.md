@@ -36,19 +36,19 @@
 # Documentation
 
 Array
-- [drop](#drop)
-- [head](#head)
-- [indexOf](#index-of)
-- [initial](#initial)
-- [join](#join)
-- [last](#last)
-- [removeFalsy](#removeFalsy)
-- [sum](#sum)
-- [unique](#unique)
-- [uniqueBy](#uniqueBy)
+- [`drop`](#drop)
+- [`head`](#head)
+- [`indexOf`](#index-of)
+- [`initial`](#initial)
+- [`join`](#join)
+- [`last`](#last)
+- [`removeFalsy`](#removeFalsy)
+- [`sum`](#sum)
+- [`unique`](#unique)
+- [`uniqueBy`](#uniqueBy)
 
 Math
-- [calculate](#calculate)
+- [`calculate`](#calculate)
                                  
 #### Array  
 
