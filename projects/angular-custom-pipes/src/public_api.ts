@@ -9,3 +9,5 @@ export * from './lib/math/';
 export * from './lib/math/math-pipes.module';
 export * from './lib/object/object-pipes.module';
 export * from './lib/object/';
+export * from './lib/string/string-pipes.module';
+export * from './lib/string/';

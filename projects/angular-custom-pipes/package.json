@@ -1,6 +1,6 @@
 {
   "name": "angular-custom-pipes",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "scripts": {
     "test": "ng test angular-custom-pipes --browsers ChromeHeadless --no-progress --source-map=false"
   },
@@ -8,6 +8,12 @@
     "@angular/common": "~9.0.7",
     "@angular/core": "~9.0.7"
   },
+  "author": "Tomasz Laskowski",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PGS-dev/angular-custom-pipes/tree/master/projects/angular-custom-pipes"
+  },
+  "homepage": "https://github.com/PGS-dev/angular-custom-pipes",
   "keywords": [
     "angular",
     "pipes",

@@ -49,8 +49,10 @@ Array
 
 Math
 - [`calculate`](#calculate)
-- [`min`](#min)
 - [`max`](#max)
+- [`min`](#min)
+- [`pow`](#pow)
+- [`round`](#round)
 
 Object
 - [`assign`](#assign)
@@ -60,10 +62,19 @@ Object
 - [`pick`](#pick)
 - [`toArray`](#toArray)
 - [`values`](#values)
+
+String
+- [`concat`](#concat)
+- [`includes`](#includes)
+- [`lowerFirst`](#lowerFirst)
+- [`replace`](#replace)
+- [`split`](#split)
+- [`startsWith`](#startsWith)
+- [`upperFirst`](#upperFirst)
                                  
 #### Array  
 
-###### drop
+##### drop
 
 Returns slice of _array_ <br />
 
@@ -75,7 +86,7 @@ Returns slice of _array_ <br />
 <p>{{ [1, 2, 3] | drop }}</p> // Output: [1, 2, 3]
 ```
 
-###### head
+##### head
 
 Returns _first value_ of array <br />
 
@@ -84,7 +95,7 @@ Returns _first value_ of array <br />
 <p>{{ [1, 2, 3] | head }}</p> // Output: [1]
 ```
 
-###### indexOf
+##### indexOf
 
 Returns _index_ of array or -1 <br />
 
@@ -93,7 +104,7 @@ Returns _index_ of array or -1 <br />
 <p>{{ [1, 2, 3] | indexOf: 2 }}</p> // Output: 1
 ```
 
-###### initial
+##### initial
 
 Returns _array_ without last value <br />
 
@@ -102,7 +113,7 @@ Returns _array_ without last value <br />
 <p>{{ [1, 2, 3] | initial: 2 }}</p> // Output: [1, 2]
 ```
 
-###### isEmpty
+##### isEmpty
 
 Returns _true_ if array is empty, else _false_ <br />
 
@@ -114,7 +125,7 @@ Returns _true_ if array is empty, else _false_ <br />
 <p>{{ [] | isEmpty }}</p> // Output: true
 ```
 
-###### join
+##### join
 
 Returns a _string_ separated by separator <br />
 
@@ -126,7 +137,7 @@ Returns a _string_ separated by separator <br />
 <p>{{ [1, 2, 3] | join: '*' }}</p> // Output: '1*2*3'
 ```
 
-###### last
+##### last
 
 Returns _last value_ of array <br />
 
@@ -135,7 +146,7 @@ Returns _last value_ of array <br />
 <p>{{ [1, 2, 3] | last }}</p> // Output: 3
 ```
 
-###### removeFalsy
+##### removeFalsy
 
 Returns _array_ without falsy values <br />
 
@@ -144,7 +155,7 @@ Returns _array_ without falsy values <br />
 <p>{{ [1, null, 2, [], NaN] | removeFalsy }}</p> // Output: [1, 2]
 ```
 
-###### sum
+##### sum
 
 Returns _sum_ of values in array <br />
 
@@ -153,7 +164,7 @@ Returns _sum_ of values in array <br />
 <p>{{ [1, 2, 3] | sum }}</p> // Output: 6
 ```
 
-###### unique
+##### unique
 
 Returns new _array_ without duplicate values <br />
 
@@ -162,7 +173,7 @@ Returns new _array_ without duplicate values <br />
 <p>{{ [1, 2, 3, 2] | unique }}</p> // Output: [1, 2, 3]
 ```
 
-###### uniqueBy
+##### uniqueBy
 
 Returns new _array_ without duplicate values <br />
 
@@ -174,7 +185,7 @@ Returns new _array_ without duplicate values <br />
 
 #### Math  
 
-###### calculate
+##### calculate
 
 Returns result of calculate <br />
 
@@ -192,16 +203,7 @@ Returns result of calculate <br />
 <p>{{ 10 | calculate: 2: CalculateActions.DIVIDE }}</p> // Output: 5
 ```
 
-###### min
-
-Returns minimum value of array <br />
-
-**Example** <br />
-```
-<p>{{ [1, 2, 3] | min }}</p> // Output: 1
-```
-
-###### max
+##### max
 
 Returns maximum value of array <br />
 
@@ -210,11 +212,41 @@ Returns maximum value of array <br />
 <p>{{ [1, 2, 3] | max }}</p> // Output: 3
 ```
 
+##### min
+
+Returns minimum value of array <br />
+
+**Example** <br />
+```
+<p>{{ [1, 2, 3] | min }}</p> // Output: 1
+```
+
+##### pow
+
+Returns the result of exponent power <br />
+
+**Example** <br />
+```
+<p>{{ 10 | pow: 2 }}</p> // Output: 100
+```
+
+##### rounded
+
+Returns rounded value base on the argument <br />
+
+**Example** <br />
+```
+<p>{{ 4.222 | rounded: 2 }}</p> // Output: 4.22
+```
+```
+<p>{{ 4.006 | rounded: 2 }}</p> // Output: 4.01
+```
+
 <br />
 
 #### Object  
 
-###### assign
+##### assign
 
 Returns target _object_ <br />
 
@@ -223,7 +255,7 @@ Returns target _object_ <br />
 <p>{{ {foo: 1} | assign: {bar: 2} }}</p> // Output: {foo: 1, bar: 2}
 ```
 
-###### invert
+##### invert
 
 Returns inverted _object_ <br />
 
@@ -232,7 +264,7 @@ Returns inverted _object_ <br />
 <p>{{ {foo: 1, bar: 2} | invert }}</p> // Output: {1: 'foo', 2: 'bar'}
 ```
 
-###### keys
+##### keys
 
 Returns _array_ of object keys <br />
 
@@ -241,7 +273,7 @@ Returns _array_ of object keys <br />
 <p>{{ {foo: 1, bar: 2} | keys }}</p> // Output: ['foo', 'bar']
 ```
 
-###### omit
+##### omit
 
 Returns _object_ without defined key/keys <br />
 
@@ -253,7 +285,7 @@ Returns _object_ without defined key/keys <br />
 <p>{{ {foo: 1, bar: 2} | omit: 'foo': 'bar' }}</p> // Output: {}
 ```
 
-###### pick
+##### pick
 
 Returns _object_ only with defined key/keys <br />
 
@@ -265,7 +297,7 @@ Returns _object_ only with defined key/keys <br />
 <p>{{ {foo: 1, bar: 2} | pick: 'foo': 'bar' }}</p> // Output: {foo: 1, bar: 2}
 ```
 
-###### toArray
+##### toArray
 
 Returns transformed an object to _array_ <br />
 
@@ -287,11 +319,75 @@ const value = {
 <p>{{ value | toArray }}</p> // Output: [{type: 1}, {type: 2}]
 ```
 
-###### values
+##### values
 
 Returns _array_ with object values <br />
 
 **Example** <br />
 ```
 <p>{{ {foo: 1, bar: 2} | keys }}</p> // Output: [1, 2]
+```
+
+<br />
+
+#### String  
+
+##### concat
+
+Returns concatenated _string_ base on the parameters <br />
+
+**Example** <br />
+```
+<p>{{ 'Lorem' | concat: ' ': 'Ipsum }}</p> // Output: 'Lorem Ipsum'
+```
+
+##### includes
+
+Returns _true_ if search value exists, else _false_ <br />
+
+**Example** <br />
+```
+<p>{{ 'Lorem ipsum solid' | includes: 'solid' }}</p> // Output: true
+```
+```
+<p>{{ 'Lorem ipsum solid' | includes: 'dummy' }}</p> // Output: false
+```
+
+##### lowerFirst
+
+Returns _string_ with first value lowercase <br />
+
+**Example** <br />
+```
+<p>{{ 'Lorem ipsum' | lowerFirst }}</p> // Output: 'lorem ipsum'
+```
+
+##### split
+
+Returns _array_ of string base on the parameters <br />
+
+**Example** <br />
+```
+<p>{{ 'Lorem-ipsum-solid' | split: '-' }}</p> // Output: ['Lorem', 'ipsum', 'solid']
+```
+
+##### startsWith
+
+Returns _true_ if value starts with parameter, else _false_ <br />
+
+**Example** <br />
+```
+<p>{{ 'Lorem ipsum solid' | startsWith: 'L' }}</p> // Output: true
+```
+```
+<p>{{ 'Lorem ipsum solid' | startsWith: 'l' }}</p> // Output: false
+```
+
+##### upperFirst
+
+Returns _string_ with first value uppercase <br />
+
+**Example** <br />
+```
+<p>{{ 'lorem ipsum' | upperFirst }}</p> // Output: 'Lorem ipsum'
 ```
